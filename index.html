@@ -46,7 +46,7 @@
             </form>
         </div>
     </div>
-    <div class="about cursor" id="titles">
+    <div class="about cursor">
         <div class="container">
             <div class="container-about">
                 <div class="about__text">
@@ -199,5 +199,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const textElement = document.querySelector('.cursor');
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                textElement.classList.add('visible');
+            }
+        });
+    });
+    observer.observe(textElement);
+});
+    </script>
+    
 </body>
 </html>
