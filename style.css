@@ -245,10 +245,3 @@ button{
 button:hover{
     box-shadow: none;
 }
-.cursor{
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-}
-.visible{
-    opacity: 1;
-}
